@@ -4,6 +4,7 @@ import Welcome from './screens/Welcome';
 import {DefaultTheme, NavigationContainer} from '@react-navigation/native';
 import SignIn from './screens/SignIn';
 import SignUp from './screens/SignUp';
+import Home from './screens/Home';
 
 const Stack = createNativeStackNavigator();
 
@@ -43,14 +44,22 @@ const App = () => {
           name="SignIn"
           component={SignIn}
           options={{
-            headerTitle: 'Login',
+            headerShown: false,
           }}
         />
         <Stack.Screen
           name="SignUp"
           component={SignUp}
           options={{
-            headerTitle: 'Create Account',
+            headerShown: false,
+          }}
+        />
+        <Stack.Screen
+          name="Home"
+          component={Home}
+          options={{
+            headerTitle: 'JC Registration App',
+            headerBackVisible: false,
           }}
         />
       </Stack.Navigator>

@@ -20,6 +20,7 @@ const ButtonJC = ({onPress, title, transparent}) => {
         style={[
           styles.text,
           {color: transparent ? theme.colors.primary : 'white'},
+          {fontWeight: transparent ? '500' : 'bold'},
         ]}>
         {title}
       </Text>
